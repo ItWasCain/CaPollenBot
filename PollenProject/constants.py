@@ -8,8 +8,13 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 HOURS = int(os.getenv('HOURS'))
 MINUTES = int(os.getenv('MINUTES'))
-CITY = os.getenv('CITY')
-MAIN_URL = 'https://yandex.ru/pogoda/ru/{}/allergies'.format(CITY)
+LATITUDE = os.getenv('LATITUDE')
+LONGITUDE = os.getenv('LONGITUDE')
+MAIN_URL = (
+    'https://yandex.ru/pogoda/ru/allergies?lat={lat}&lon={lon}'.format(
+        lat=LATITUDE, lon=LONGITUDE
+    )
+)
 TIME_SLEEP = 2
 
 
