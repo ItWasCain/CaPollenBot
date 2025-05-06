@@ -79,9 +79,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    while True:
-        try:
-            asyncio.run(main())
-        except Exception as e:
-            logging.error(f"Перезапуск после ошибки: {str(e)}")
-        time.sleep(60)
+    try:
+        asyncio.run(main())
+    except Exception as e:
+        logging.error(f"{str(e)}")
