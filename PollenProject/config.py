@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
 import logging
+
 
 def create_driver():
     try:
@@ -9,7 +9,7 @@ def create_driver():
         options.add_argument('--no-sandbox')
         options.add_argument('--headless')
         options.add_argument('--disable-dev-shm-usage')
-        
+
         # Используем Chrome из предустановленного образа
         driver = webdriver.Chrome(options=options)
         return driver

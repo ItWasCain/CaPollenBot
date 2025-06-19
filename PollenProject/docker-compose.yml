@@ -4,8 +4,9 @@ services:
   pollen-bot:
     build: .
     container_name: pollen-bot
-    restart: unless-stopped
+    restart: no
     env_file:
       - .env
     volumes:
       - ./:/app
+

@@ -1,7 +1,5 @@
 import logging
-import time
 import asyncio
-from datetime import datetime
 
 import telegram
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
