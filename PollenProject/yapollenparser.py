@@ -80,9 +80,9 @@ def get_data_new(buttons, driver):
             except Exception as e:
                 print(f"Ошибка при обработке бара для {allergen_name}: {e}")
                 allergens.append('нет данных')
-            if allergens:
-                result['allergens'][allergen_name] = allergens
-        # Помечаем, что дни уже собраны
+        if allergens and set(allergens) != {'CLEAR'}:
+            result['allergens'][allergen_name] = allergens
+
         days_collected = True
 
     return result
@@ -124,3 +124,4 @@ def get_forecast():
 
 if __name__ == '__main__':
     print(get_forecast())
+    # get_forecast()
