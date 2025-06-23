@@ -14,7 +14,7 @@ def format_pollen_table(pollen_data):
     current_status = []
 
     header_row = [InlineKeyboardButton("📅", callback_data="ignore")]
-    for day in pollen_data['day'][0:5]:
+    for day in pollen_data['day'][0:constants.DAYS]:
         header_row.append(
             InlineKeyboardButton(
                 day.capitalize(), callback_data="ignore"
@@ -32,7 +32,7 @@ def format_pollen_table(pollen_data):
             ]
             current_status.append(f"{levels[0]} {allergen}")
 
-            for level in levels[0:5]:
+            for level in levels[0:constants.DAYS]:
 
                 emoji = constants.POLLEN_LEVEL[level]
                 row.append(InlineKeyboardButton(emoji, callback_data="ignore"))

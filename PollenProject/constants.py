@@ -16,7 +16,7 @@ MAIN_URL = (
     )
 )
 TIME_SLEEP = 2
-
+DAYS = 5
 
 BUTTON_CLASS = 'AppAllergyForecast_allergensList__button____VIX'
 STRONG_CLASS = 'AppAllergyForecast_pie__level_strong__H7IA2'

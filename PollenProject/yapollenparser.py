@@ -80,7 +80,7 @@ def get_data_new(buttons, driver):
             except Exception as e:
                 print(f"Ошибка при обработке бара для {allergen_name}: {e}")
                 allergens.append('нет данных')
-        if allergens and set(allergens) != {'CLEAR'}:
+        if allergens and set(allergens[0:constants.DAYS]) != {'CLEAR'}:
             result['allergens'][allergen_name] = allergens
 
         days_collected = True
